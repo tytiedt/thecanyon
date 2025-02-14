@@ -84,3 +84,5 @@ async def read__forcast(zone: str):
         return response.json()  # Return the JSON data from the external API
     else:
         return {"error": "Failed to fetch data", "status_code": response.status_code}
+    
+handler = Mangum(app)
